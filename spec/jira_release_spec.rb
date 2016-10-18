@@ -17,7 +17,6 @@ describe JiraRelease do
   end
 
   it 'raises error with missing payload for post request' do
-    #expect(true).to eq(true)
     expect{@jira.run("post", "sample/url")}.to raise_error(ArgumentError)
   end
 
