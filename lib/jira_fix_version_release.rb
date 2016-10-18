@@ -1,11 +1,11 @@
-require 'jira_release/version'
-require 'jira_release/jira_options'
+require "jira_fix_version_release/version"
+require 'jira_fix_version_release/jira_options'
 
-module JiraRelease
+module JiraFixVersionRelease
   def self.parse(args)
 		options = {}
 		opt_parser = OptionParser.new do |opts|
-			opts.banner = "Usage: JIRA_RELEASE [options]"
+			opts.banner = "Usage: jira_fix_version_release [options]"
 			opts.separator " "
 	      	opts.separator "Specific options:"
 
@@ -113,3 +113,4 @@ module JiraRelease
 		jira.releaseFixVersion(release['id'])
 	end
 end
+

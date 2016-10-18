@@ -1,9 +1,8 @@
-
 require 'rubygems'
 require 'date'
-require 'jira_release/jira_client'
+require 'jira_fix_version_release/jira_client'
 
-module JiraRelease
+module JiraFixVersionRelease
 	class JIRAOptions
 		def initialize(username, password, jira_domain)
 			jira_domain << '/' unless jira_domain.end_with?('/')

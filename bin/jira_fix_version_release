@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "jira_fix_version_release"
+
+options = JiraFixVersionRelease.parse(ARGV)
+JiraFixVersionRelease.execute_options(options)

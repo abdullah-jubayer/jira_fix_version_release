@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "jira_release"
+require "jira_fix_version_release"
 
 require "irb"
 IRB.start

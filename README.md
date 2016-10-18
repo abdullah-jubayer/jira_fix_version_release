@@ -1,4 +1,4 @@
-# JiraRelease
+# JiraFixVersionRelease
 
 A simple utility to create and release JIRA Versions. Provide your JIRA credential and JQL query for the issues you want to add a fix version to and this utility will create the fix version and release it for you in JIRA. This script assumes your JIRA user have the permission to create a release and update the issues. This script also assumes that the fix version you provide is new and not created in JIRA yet.
 
@@ -13,7 +13,7 @@ A simple utility to create and release JIRA Versions. Provide your JIRA credenti
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jira_release'
+gem 'jira_fix_version_release'
 ```
 
 And then execute:
@@ -22,7 +22,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jira_release
+    $ gem install jira_fix_version_release
 
 Alternate way to install:
 
@@ -36,15 +36,15 @@ Then build and install the gem:
 
     $ rake install
 
-The gem should install the 'jira_release' binary.
+The gem should install the 'jira_fix_version_release' binary.
 
 Just run:
 
-	$ jira_release -h 
+	$ jira_fix_version_release -h 
 
 ## Usage
 
-You can run `jira_release -h` from the command line any time to see available options. 
+You can run `jira_fix_version_release -h` from the command line any time to see available options. 
 Required options include username, password, project_key, jira_domain, jql_filter and fix_version. 
 This gem is intended to be executed with one line command however if an required option is missing then this gem will ask for the value of that option to proceed. 
 
@@ -60,7 +60,7 @@ should be rescripted as
 `'project=test+AND+resolution=Done+AND+"Sub Team"=dev+AND+(fixVersion+NOT+in+releasedVersions()+OR+fixVersion+is+EMPTY+OR+fixVersion+NOT+in+releasedVersions())&maxResults=100000&startAt=0'`
 
 Sample command to execute:
-$ `jira_release -u username@yourcompany.com -p password -j project_key -v fix_version -d https://yourcompanyjiradomain/ -f 'jqlfilter'`
+$ `jira_fix_version_release -u username@yourcompany.com -p password -j project_key -v fix_version -d https://yourcompanyjiradomain/ -f 'jqlfilter'`
 
 ## Tests
 
@@ -68,7 +68,7 @@ $ `jira_release -u username@yourcompany.com -p password -j project_key -v fix_ve
 
     Sample output:
 
-    JiraRelease
+    JiraFixVersionRelease
     	first_test
     	second_test
     	and_so_on
@@ -84,7 +84,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jira_release. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jira_fix_version_release. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

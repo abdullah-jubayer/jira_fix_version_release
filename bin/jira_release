@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "jira_release"
-
-options = JiraRelease.parse(ARGV)
-JiraRelease.execute_options(options)
